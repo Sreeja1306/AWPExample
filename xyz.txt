@@ -1,0 +1,39 @@
+Connected to:
+Oracle Database 21c Express Edition Release 21.0.0.0.0 - Production
+Version 21.3.0.0.0
+
+SQL> create table student ( std_id number,name string,marks int)
+  2  ;
+create table student ( std_id number,name string,marks int)
+                                          *
+ERROR at line 1:
+ORA-00902: invalid datatype
+
+
+SQL> create table student ( std_id number,name varchar2(12),marks number)
+  2  ;
+
+Table created.
+
+SQL> SELECT DATABASE();
+SELECT DATABASE()
+                *
+ERROR at line 1:
+ORA-00923: FROM keyword not found where expected
+
+
+SQL> SELECT ora_database_name FROM dual;
+
+ORA_DATABASE_NAME
+--------------------------------------------------------------------------------
+XE
+
+SQL> SELECT * FROM global_name;
+
+GLOBAL_NAME
+--------------------------------------------------------------------------------
+XE
+
+SQL> SHOW PDBS;
+SP2-0382: The SHOW PDBS command is not available
+SQL>
